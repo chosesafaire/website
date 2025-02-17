@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Discover the best things to do in La Rochelle, from must-see attractions to exclusive insider tips!">
+        <title>Things to Do in La Rochelle - Must-See Activities and Insider Tips</title>
+        <style>
+            body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
+            header { background-color: rgba(0, 115, 230, 0.9); color: white; padding: 20px; font-size: 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); }
+            nav { display: flex; gap: 20px; align-items: center; }
+            .dropdown { position: relative; display: inline-block; }
+            .dropdown-content { display: none; position: absolute; background-color: white; min-width: 180px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); z-index: 1; border-radius: 5px; overflow: hidden; top: 100%; left: 0; }
+            .dropdown-content a { color: black; padding: 12px; text-decoration: none; display: block; transition: background 0.3s ease; }
+            .dropdown-content a:hover { background-color: #f0f0f0; }
+            .dropdown:hover .dropdown-content { display: block; }
+            .content { max-width: 800px; margin: 0 auto; padding: 40px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+            .section { padding: 20px; text-align: center; background-color: white; margin-bottom: 20px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); cursor: pointer; position: relative; }
+            .section:hover { transform: translateY(-5px); box-shadow: 0px 12px 30px rgba(0,0,0,0.15); }
+            .alt-section { background-color: #eef5ff; }
+            .nav-link { color: white; text-decoration: none; padding: 12px 18px; font-weight: bold; border-radius: 5px; transition: background 0.3s ease; }
+            .nav-link:hover { background-color: #005bb5; }
+            .highlight { font-size: 28px; font-weight: bold; color: #0073e6; }
+            .blog-section { max-width: 800px; margin: 0 auto; text-align: center; }
+            .blog-section h2 { color: #0073e6; }
+            .blog-section p { line-height: 1.6; display: flex !important; }
+            .hidden-content { display: none; }
+            .background { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Notre-Dame_de_la_Garde_aerial_view_2020.jpeg/1280px-Notre-Dame_de_la_Garde_aerial_view_2020.jpeg'); background-size: cover; background-position: center; color: white; padding: 60px 20px; text-align: center; border-radius: 15px; box-shadow: 0px 8px 20px rgba(0,0,0,0.2); }
+            .section img { width: 100%; height: auto; border-radius: 10px; margin-top: 10px; }
+            .toggle-btn { background-color: #0073e6; color: white; border: none; padding: 10px 20px; margin-top: 10px; cursor: pointer; border-radius: 25px; font-size: 14px; transition: background-color 0.3s ease; }
+            .toggle-btn:hover { background-color: #005bb5; }
+            .genre-container { position: absolute; top: 10px; right: 10px; display: flex !important; gap: 5px; }
+            .genre { padding: 5px 10px; border-radius: 25px; font-size: 12px; color: white; }
+            .genre.culture { background-color: #ff6f61; }
+            .genre.nature { background-color: #6b5b95; }
+            .genre.gastronomy { background-color: #88b04b; }
+            .genre.history { background-color: #ffd700; }
+            .genre.relaxation { background-color: #92a8d1; }
+            .filter-buttons { margin-bottom: 20px; }
+            .filter-button { background-color: #0073e6; color: white; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 25px; font-size: 14px; transition: background-color 0.3s ease; }
+            .filter-button:hover { background-color: #005bb5; }
+            .action-button { background-color: #ff6f61; color: white; border: none; padding: 10px 20px; margin-left: 20px; cursor: pointer; border-radius: 25px; font-size: 14px; transition: background-color 0.3s ease; }
+            .action-button:hover { background-color: #ff5a5a; }
+        </style>
+        <script>
+         function toggleText(section) {
+        let content = section.querySelector('.hidden-content');
+        let button = section.querySelector('.toggle-btn');
+
+        if (content.style.display === '' || content.style.display === 'none') {
+            content.style.display = 'block';
+            button.innerText = 'Show Less';
+        } else {
+            content.style.display = 'none';
+            button.innerText = 'Show More';
+        }
+    }
+
+            function filterSections(genre) {
+                const sections = document.querySelectorAll('.section');
+                sections.forEach(section => {
+                    const genres = section.dataset.genre.split(' ');
+                    if (genre === 'all' || genres.includes(genre)) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            }
+        </script>
+    </head>
+<body>
+    <header>
+        <h1 id="page-title">Things to Do in La Rochelle</h1>
+        <nav>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Destinations</a>
+                <div class="dropdown-content">
+                    <a href="index.html">Marseille</a>
+                    <a href="larochelle.html">La Rochelle</a>
+                    <a href="guadeloupe.html">Guadeloupe</a>
+                </div>
+            </div>
+            <a id="deals" href="https://coclibel.com/serviceproduct/1727627635930x348655286520905700" class="nav-link">Our Deals</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+    <div class="background">
+        <h1>Discover the Best Things to Do in La Rochelle</h1>
+        <p>Must-see activities, iconic locations, and exclusive insider tips.</p>
+    </div>
+    <div class="content">
+        <div class="filter-buttons">
+            <button class="filter-button" onclick="filterSections('all')">All</button>
+            <button class="filter-button" onclick="filterSections('culture')">Culture</button>
+            <button class="filter-button" onclick="filterSections('nature')">Nature</button>
+            <button class="filter-button" onclick="filterSections('gastronomy')">Gastronomy</button>
+            <button class="filter-button" onclick="filterSections('history')">History</button>
+            <button class="filter-button" onclick="filterSections('relaxation')">Relaxation</button>
+        </div>
+        <div class="section" data-genre="histoire" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre histoire">History</div>
+            </div>
+            <h2>1. Stroll in the Old Port of La Rochelle</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Vieux_Port_La_Rochelle_2017.jpg/1600px-Vieux_Port_La_Rochelle_2017.jpg" alt="Vieux-Port de La Rochelle">
+            <div class="hidden-content">
+                <p>The Old Port of La Rochelle has been the beating heart of the city since the Middle Ages. It offers a picturesque walk along lively quays, restaurant terraces, and elegant sailboats. The medieval towers, remnants of the fortifications, majestically watch over the port entrance.</p>
+                <h3>🔹 Must-Do:</h3>
+                <ul>
+                    <li>Admire the sunset over the port.</li>
+                    <li>Savor oysters on the quays.</li>
+                    <li>Embark on a cruise to Île de Ré or Fort Boyard.</li>
+                </ul>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section alt-section" data-genre="histoire" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre histoire">History</div>
+            </div>
+            <h2>2. Explore the Towers of La Rochelle</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Tour_de_la_Cha%C3%AEne_0003.jpg/560px-Tour_de_la_Cha%C3%AEne_0003.jpg" alt="Tours de La Rochelle">
+            <div class="hidden-content">
+                <p>Symbols of the city's maritime power, the Towers of La Rochelle (Tour Saint-Nicolas, Tour de la Chaîne, and Tour de la Lanterne) offer a journey into medieval history. These fortified bastions once protected the port entrance and monitored enemy ships.</p>
+                <h3>🔹 Must-See:</h3>
+                <ul>
+                    <li>Climb to the top of the towers for an exceptional panoramic view.</li>
+                    <li>Dive into the history of sailors and prisoners held in these towers.</li>
+                    <li>Enjoy a guided tour to learn more about the medieval era.</li>
+                </ul>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section" data-genre="détente" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre détente">Nature</div>
+            </div>
+            <h2>3. Discover the Aquarium of La Rochelle</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Aquarium_La_Rochelle_-_M%C3%A9duses_stri%C3%A9es.JPG/1599px-Aquarium_La_Rochelle_-_M%C3%A9duses_stri%C3%A9es.JPG" alt="Aquarium de La Rochelle">
+            <div class="hidden-content">
+                <p>The Aquarium of La Rochelle is one of the largest in Europe, housing over 12,000 marine animals in 82 aquariums. From the Atlantic to the tropics, dive into a fascinating world where sharks, turtles, and jellyfish swim before your eyes.</p>
+                <h3>🔹 Highlights:</h3>
+                <ul>
+                    <li>An immersive underwater tunnel.</li>
+                    <li>A tank dedicated to luminescent jellyfish.</li>
+                    <li>An interactive space for children.</li>
+                </ul>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section alt-section" data-genre="gastronomie" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre gastronomie">Gastronomy</div>
+            </div>
+            <h2>4. Savor Local Flavors at the Central Market</h2>
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.larochelle-tourisme.com%2Fmarches-reguliers%2Fmarche-central-de-la-rochelle&psig=AOvVaw1lOYIaaVvwhigydEBTfZfB&ust=1739761471731000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjIiNmax4sDFQAAAAAdAAAAABAJ" alt="Marché Central de La Rochelle">
+            <div class="hidden-content">
+                <p>The Central Market of La Rochelle is a true gastronomic paradise. In a magnificent 19th-century hall, find local products: Marennes-Oléron oysters, Pineau des Charentes, Charentes-Poitou butter, and goat cheese.</p>
+                <h3>🔹 Must-Try:</h3>
+                <ul>
+                    <li>Savor oysters paired with a glass of white wine.</li>
+                    <li>Taste the cagouilles, local snails in sauce.</li>
+                    <li>Buy a galette charentaise, a regional sweet specialty.</li>
+                </ul>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section" data-genre="histoire" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre histoire">History</div>
+            </div>
+            <h2>5. Dive into History at the Maritime Museum</h2>
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.francebleu.fr%2Finfos%2Fculture-loisirs%2Fdeconfinement-le-musee-maritime-de-la-rochelle-a-ouvert-ses-portes-1590254188&psig=AOvVaw10KxG_KgJVNUJgL6RPF_q6&ust=1739761852093000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMCgkpqcx4sDFQAAAAAdAAAAABAE" alt="Musée Maritime de La Rochelle">
+            <div class="hidden-content">
+                <p>The Maritime Museum of La Rochelle invites you to relive the era of sailors. This floating museum allows you to board historic ships and explore interactive rooms dedicated to navigation.</p>
+                <h3>🔹 Must-See:</h3>
+                <ul>
+                    <li>The France I, a former meteorological ship.</li>
+                    <li>The history of the Cape Horn sailors, brave seafarers of centuries past.</li>
+                    <li>A replica of La Pérouse's ship, a famous French explorer.</li>
+                </ul>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section alt-section" data-genre="détente" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre détente">Relaxation</div>
+            </div>
+            <h2>6. Relax at Parc Charruyer</h2>
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.larochelle.fr%2Fannuaires%2Flieux%2Fannuaire%2Fparc-charruyer&psig=AOvVaw1Wxjw02h9MJjTiB2CkR1EW&ust=1739761917082000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCICMzqucx4sDFQAAAAAdAAAAABAE" alt="Parc Charruyer">
+            <div class="hidden-content">
+                <p>A true green lung of La Rochelle, Parc Charruyer stretches over 40 hectares and crosses the city. Perfect for a bucolic stroll, it offers a peaceful and shaded setting with streams and play areas.</p>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section" data-genre="nature" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre nature">Nature</div>
+            </div>
+            <h2>7. Escape to Île de Ré</h2>
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Ffr%2Fphotos%2File-de-r%25C3%25A9&psig=AOvVaw1N1mojTdIxLujYisyZnYXo&ust=1739761956880000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIir0Mecx4sDFQAAAAAdAAAAABAE" alt="Île de Ré">
+            <div class="hidden-content">
+                <p>Accessible by bike from La Rochelle, Île de Ré is a natural gem with fine sandy beaches, authentic villages, and salt marshes.</p>
+                <h3>🔹 Must-See:</h3>
+                <ul>
+                    <li>Stroll through the flowery alleys of Saint-Martin-de-Ré.</li>
+                    <li>Visit the salt marshes and taste the famous fleur de sel.</li>
+                    <li>Swim at the Plage de la Conche des Baleines.</li>
+                </ul>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section alt-section" data-genre="culture" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre culture">Culture</div>
+            </div>
+            <h2>8. Discover the Museum of Natural History</h2>
+            <img src="https://static.actu.fr/uploads/2021/08/museul-histoire-naturelle-la-rochelle-expo-baleine-2020-julien-chauvet-960x640.jpg" alt="Muséum d’Histoire Naturelle">
+            <div class="hidden-content">
+                <p>The Museum of Natural History houses fascinating collections on fauna, flora, and ethnology. A journey around the world through thousands of objects and specimens.</p>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section" data-genre="détente" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre détente">Relaxation</div>
+            </div>
+            <h2>9. Relax on Minimes Beach</h2>
+            <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/107000/107193-Minimes-Beach.jpg" alt="Plage des Minimes">
+            <div class="hidden-content">
+                <p>The largest beach in La Rochelle, perfect for a lazy afternoon or a water sports session. Enjoy an unobstructed view of the Atlantic.</p>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section alt-section" data-genre="culture" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre culture">Culture</div>
+            </div>
+            <h2>10. Stroll in the Saint-Nicolas District</h2>
+            <img src="https://www.trace-ta-route.com/wp-content/uploads/2022/12/La-Rochelle-bar-Saint-Nicolas-1-blog-voyage-Trace-Ta-Route-1200x800.jpg" alt="Quartier Saint-Nicolas">
+            <div class="hidden-content">
+                <p>Formerly a fishermen's quarter, the Saint-Nicolas District is a haven of tranquility with cobblestone streets lined with artisan shops and charming cafes.</p>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+    </div>
+</body>
+</html>
