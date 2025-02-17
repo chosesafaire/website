@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the best things to do in Marseille, from must-see attractions to exclusive insider tips!">
+    <title>Things to Do in Marseille - Must-See Activities and Insider Tips</title>
+    <style>
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
+        header { background-color: rgba(0, 115, 230, 0.9); color: white; padding: 20px; font-size: 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); }
+        nav { display: flex; gap: 20px; align-items: center; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 180px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); z-index: 1; border-radius: 5px; overflow: hidden; top: 100%; left: 0; }
+        .dropdown-content a { color: black; padding: 12px; text-decoration: none; display: block; transition: background 0.3s ease; }
+        .dropdown-content a:hover { background-color: #f0f0f0; }
+        .dropdown:hover .dropdown-content { display: block; }
+        .content { max-width: 800px; margin: 0 auto; padding: 40px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+        .section { padding: 20px; text-align: center; background-color: white; margin-bottom: 20px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); cursor: pointer; position: relative; }
+        .section:hover { transform: translateY(-5px); box-shadow: 0px 12px 30px rgba(0,0,0,0.15); }
+        .alt-section { background-color: #eef5ff; }
+        .nav-link { color: white; text-decoration: none; padding: 12px 18px; font-weight: bold; border-radius: 5px; transition: background 0.3s ease; }
+        .nav-link:hover { background-color: #005bb5; }
+        .highlight { font-size: 28px; font-weight: bold; color: #0073e6; }
+        .blog-section { max-width: 800px; margin: 0 auto; text-align: center; }
+        .blog-section h2 { color: #0073e6; }
+        .blog-section p { line-height: 1.6; display: flex !important; }
+        .hidden-content { display: none; }
+        .background { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Notre-Dame_de_la_Garde_aerial_view_2020.jpeg/1280px-Notre-Dame_de_la_Garde_aerial_view_2020.jpeg'); background-size: cover; background-position: center; color: white; padding: 60px 20px; text-align: center; border-radius: 15px; box-shadow: 0px 8px 20px rgba(0,0,0,0.2); }
+        .section img { width: 100%; height: auto; border-radius: 10px; margin-top: 10px; }
+        .toggle-btn { background-color: #0073e6; color: white; border: none; padding: 10px 20px; margin-top: 10px; cursor: pointer; border-radius: 25px; font-size: 14px; transition: background-color 0.3s ease; }
+        .toggle-btn:hover { background-color: #005bb5; }
+        .genre-container { position: absolute; top: 10px; right: 10px; display: flex !important; gap: 5px; }
+        .genre { padding: 5px 10px; border-radius: 25px; font-size: 12px; color: white; }
+        .genre.culture { background-color: #ff6f61; }
+        .genre.nature { background-color: #6b5b95; }
+        .genre.gastronomy { background-color: #88b04b; }
+        .genre.history { background-color: #ffd700; }
+        .genre.relaxation { background-color: #92a8d1; }
+        .filter-buttons { margin-bottom: 20px; }
+        .filter-button { background-color: #0073e6; color: white; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 25px; font-size: 14px; transition: background-color 0.3s ease; }
+        .filter-button:hover { background-color: #005bb5; }
+        .action-button { background-color: #ff6f61; color: white; border: none; padding: 10px 20px; margin-left: 20px; cursor: pointer; border-radius: 25px; font-size: 14px; transition: background-color 0.3s ease; }
+        .action-button:hover { background-color: #ff5a5a; }
+    </style>
+    <script>
+        function toggleText(section) {
+            let content = section.querySelector('.hidden-content');
+            let button = section.querySelector('.toggle-btn');
+
+            if (content.style.display === '' || content.style.display === 'none') {
+                content.style.display = 'block';
+                button.innerText = 'Show Less';
+            } else {
+                content.style.display = 'none';
+                button.innerText = 'Show More';
+            }
+        }
+
+        function filterSections(genre) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const genres = section.dataset.genre.split(' ');
+                if (genre === 'all' || genres.includes(genre)) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 id="page-title">Things to Do in Marseille</h1>
+        <nav>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Destinations</a>
+                <div class="dropdown-content">
+                    <a href="index.html">Marseille</a>
+                    <a href="larochelle.html">La Rochelle</a>
+                    <a href="guadeloupe.html">Guadeloupe</a>
+                </div>
+            </div>
+            <a id="deals" href="https://coclibel.com/serviceproduct/1727627635930x348655286520905700" class="nav-link">Our Deals</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+    <div class="background">
+        <h1>Discover the Best Things to Do in Marseille</h1>
+        <p>Must-see activities, iconic locations, and exclusive insider tips.</p>
+    </div>
+    <div class="content">
+        <div class="filter-buttons">
+            <button class="filter-button" onclick="filterSections('all')">All</button>
+            <button class="filter-button" onclick="filterSections('culture')">Culture</button>
+            <button class="filter-button" onclick="filterSections('nature')">Nature</button>
+            <button class="filter-button" onclick="filterSections('gastronomy')">Gastronomy</button>
+            <button class="filter-button" onclick="filterSections('history')">History</button>
+            <button class="filter-button" onclick="filterSections('relaxation')">Relaxation</button>
+        </div>
+        <div class="section" data-genre="history" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre history">History</div>
+            </div>
+            <h2>1. Visit the Old Port of Marseille</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Marseille_Old_Port.jpg/1920px-Marseille_Old_Port.jpg" alt="Old Port of Marseille">
+            <div class="hidden-content">
+                <p>The Old Port of Marseille is one of the city's most iconic locations. This is where Marseille's history began, and today it remains a lively place where fishing boats mingle with luxury yachts.</p>
+                <ul>
+                    <li>Take a stroll along the port.</li>
+                    <li>Savor a bouillabaisse in a traditional restaurant.</li>
+                    <li>Embark on an excursion to the Frioul Islands or the Château d'If.</li>
+                </ul>
+                <h3>🔥 HOT DEAL:</h3>
+                👉 Book here:
+                <br>
+                🔗 <a href="https://coclibel.com/serviceprod1/1739197158047x402303106970550300?lang=fr_FR" target="_blank"> Fada Bike - Old Port Tour </a>
+                <br>
+                🔗 <a href="https://coclibel.com/serviceprod1/1739197954854x279448711416250370?lang=fr_FR" target="_blank"> Rent an Electric Bike </a>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section alt-section" data-genre="history" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre history">History</div>
+            </div>
+            <h2>2. Explore Notre-Dame de la Garde</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Basilique_Notre-Dame-de-la-Garde_-_vue_int%C3%A9rieure.jpg/1280px-Basilique_Notre-Dame-de-la-Garde_-_vue_int%C3%A9rieure.jpg" alt="Notre-Dame de la Garde">
+            <div class="hidden-content">
+                <p>If you're looking for the best view of Marseille, this is the place to go! The Basilica of Notre-Dame de la Garde, nicknamed the "Good Mother," perched on a hill, overlooks the city and offers an incredible panoramic view of the entire Phocaean city and the Mediterranean.</p>
+                <h3>⛪ Why Visit Notre-Dame de la Garde?</h3>
+                <ul>
+                    <li><strong>An exceptional panorama 🌍:</strong> 360° view of Marseille, the Frioul Islands, and the Blue Coast.</li>
+                    <li><strong>An architectural gem 🏰:</strong> A unique blend of Romanesque-Byzantine style and golden mosaics.</li>
+                    <li><strong>A symbol of protection for Marseille residents ✨:</strong> Sailors come here to place ex-votos to be protected at sea.</li>
+                    <li><strong>A perfect spot for photos 📸:</strong> Ideal for capturing Marseille at sunset.</li>
+                </ul>
+                <h3>🚲 Hot Deal: Climb to the Good Mother effortlessly with Fada Bike!</h3>
+                <p>💡 <strong>Want to avoid the tiring climb?</strong> With Fada Bike, ride up to Notre-Dame de la Garde without breaking a sweat thanks to the electric bike!</p>
+                <h3>🔥 HOT DEAL: Special offer for a guided electric bike tour!</h3>
+                👉 Book here:
+                <br>
+                🔗 🔹 <a href="https://coclibel.com/serviceprod1/1739197158047x402303106970550300?lang=fr_FR&root=1739196707368x272818063417802750&serviceaccueillant=1727627635930x348655286520905700&discount=discount" target="_blank"> Fada Bike - Notre-Dame de la Garde Ascent </a>
+                <br>
+                🔗 🔹 <a href="https://coclibel.com/serviceprod1/1739197954854x279448711416250370?lang=fr_FR&root=1739197832138x667712320408911900&serviceaccueillant=1727627635930x348655286520905700&discount=discount" target="_blank"> Fada Bike - Book Your Bike </a>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section" data-genre="culture" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre culture">Culture</div>
+            </div>
+            <h2>3. Discover the Panier District</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Rue_Panier_Marseille.jpg" alt="Le Panier">
+            <div class="hidden-content">
+                <p>The Panier district of Marseille is a labyrinth of picturesque alleyways, colorful facades, and small artisan shops. This bohemian neighborhood is perfect for a walking tour and to experience the authentic soul of Marseille.</p>
+                <ul>
+                    <li>Must-see: the Vieille Charité, a beautiful historic building, and the street art murals that adorn the walls of the neighborhood.</li>
+                </ul>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section alt-section" data-genre="nature relaxation" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre nature">Nature</div>
+                <div class="genre relaxation">Relaxation</div>
+            </div>
+            <h2>4. Hiking in the Calanques</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/En-Vau_calanque_1.jpg/1920px-En-Vau_calanque_1.jpg" alt="Calanques of Marseille">
+            <div class="hidden-content">
+                <p>If you're looking for "the most beautiful natural landscapes near Marseille," then head to the Calanques National Park! This natural gem offers exceptional hiking trails and turquoise coves.</p>
+                <ul>
+                    <li>Calanques not to be missed: Sormiou, Morgiou, En-Vau, and especially the Calanque de Sugiton, a natural pool with crystal-clear waters, perfect for a swim after a hike.</li>
+                </ul>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section" data-genre="nature" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre nature">Nature</div>
+            </div>
+            <h2>5. Explore the Blue Grotto</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Grotta_azzurra.capri.JPG/1920px-Grotta_azzurra.capri.JPG" alt="Blue Grotto">
+            <div class="hidden-content">
+                <p>The Blue Grotto of Marseille is a well-kept secret. Accessible by kayak or boat, this sea cave is distinguished by its incredible blue reflections due to natural light.</p>
+                <ul>
+                    <li>Practical tip: If you don't want to walk too far, consider reserving a table at <a href="https://g.co/kgs/64HkBUr" target="_blank">the nautic bar</a>, the port's restaurant, which gives you quicker access.</li>
+                    <li>You can also access it directly by sea during a <a href="https://coclibel.com/serviceprod1/1737465706847x638020021389885400?lang=fr_FR&root=1737465511051x504047094939779100&serviceaccueillant=1727627635930x348655286520905700" target="_blank">Calanques Boat Excursion</a>.</li>
+                </ul>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section" data-genre="relaxation" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre relaxation">Relaxation</div>
+            </div>
+            <h2>6. Stroll Along the Corniche Kennedy</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/MarseillesRade.jpg" alt="Corniche Kennedy">
+            <div class="hidden-content">
+                <p>The <strong>Corniche Kennedy</strong> is the most beautiful coastal road in Marseille!</p>
+                <h3>🌅 Why Explore the Corniche Kennedy?</h3>
+                <ul>
+                    <li><strong>A 100% panoramic route 🌊:</strong> Incredible view of the sea.</li>
+                    <li><strong>Accessible beaches and coves 🏖️:</strong> Perfect for a break.</li>
+                </ul>
+                <h3>🚴‍♂️ Hot Deal: Explore the Corniche by Electric Bike!</h3>
+                <p>💡 <strong>Want to cruise along the sea effortlessly?</strong></p>
+                <a href="https://coclibel.com/serviceprod1/1739197954854x279448711416250370?lang=fr_FR&root=1739197832138x667712320408911900&serviceaccueillant=1727627635930x348655286520905700&discount=discount" target="_blank">🔹 Rent an Electric Bike </a>
+                or <a href="https://coclibel.com/serviceprod1/1739197158047x402303106970550300?lang=fr_FR&root=1739196707368x272818063417802750&serviceaccueillant=1727627635930x348655286520905700&discount=discount" target="_blank">🔹 Enjoy an Organized Tour </a>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section" data-genre="nature" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre nature">Nature</div>
+            </div>
+            <h2>7. Discover Les Goudes</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Rocher_des_Goudes.jpg/1920px-Rocher_des_Goudes.jpg" alt="Les Goudes">
+            <div class="hidden-content">
+                <p>If you're looking for the most beautiful authentic corner of Marseille, Les Goudes is a must-visit destination. Located at the southernmost tip of the city, this small fishing village offers a stunning natural setting, with turquoise sea, steep cliffs, and hidden coves. Far from the urban hustle and bustle, Les Goudes is the perfect place for a nature escape in Marseille, whether for a walk, a swim, or an unforgettable paddle session!</p>
+                <h3>🏝️ Why Visit Les Goudes in Marseille?</h3>
+                <ul>
+                    <li>🌊 A breathtaking natural setting: Les Goudes offers a postcard-worthy landscape, with crystal-clear waters, wind-sculpted rocks, and preserved nature. It's one of the best places in Marseille for a panoramic hike or a swim in hidden coves like the Calanque de Callelongue and the Baie des Singes.</li>
+                    <li>🏡 A picturesque and authentic village: Stroll between the colorful fishermen's houses, discover typical restaurants where you can savor fresh fish and traditional bouillabaisse, and enjoy the warm and local atmosphere of the neighborhood.</li>
+                    <li>🌅 An unforgettable sunset: Les Goudes is THE perfect spot to admire a magical sunset over the Mediterranean. A moment not to be missed during your stay in Marseille!</li>
+                </ul>
+                <h3>🚣‍♂️ Hot Deal: Paddle in Les Goudes: Discover the Marseille Coast from the Sea!</h3>
+                <p>Want to experience something unique in Marseille? Paddle along the cliffs of Les Goudes and access hidden coves only reachable by sea. It's one of the best outdoor activities in Marseille to fully enjoy the landscape between sport and relaxation.</p>
+                <h3>🔥 HOT DEAL: Book Your Paddle Session in Les Goudes at a Reduced Price!</h3>
+                👉 Access the offer here: 🔗 <a href="https://coclibel.com/serviceprod1/1739550260443x633618400859127800?lang=fr_FR&root=1739550144879x180113919699582980&serviceaccueillant=1727627635930x348655286520905700&discount=discount" target="_blank"> Paddle in Les Goudes - Booking </a>
+                <h3>📍 Practical Info for Visiting Les Goudes</h3>
+                <ul>
+                    <li>📌 Location: Les Goudes District, Marseille, France</li>
+                    <li>🚗 Access: 30 minutes by car or bus from the Old Port</li>
+                    <li>🏖️ What to do? Paddle, swimming, hiking, snorkeling</li>
+                    <li>🍽️ Where to eat? The must-visit "Le Grand Bar des Goudes" and "Chez Paul" for an authentic Marseille bouillabaisse.</li>
+                    <li>📷 Best photo spots: Panoramic view from the Les Goudes road and the Baie des Singes beach.</li>
+                </ul>
+                <h3>🔥 Why Go to Les Goudes in Marseille?</h3>
+                <ul>
+                    <li>✅ One of the most beautiful places in Marseille for a nature escape</li>
+                    <li>✅ An authentic atmosphere between sea and fishing village</li>
+                    <li>✅ Hidden coves and turquoise water reminiscent of the Caribbean</li>
+                    <li>✅ A perfect spot for paddling and a unique session in the Mediterranean</li>
+                    <li>✅ A hot deal for paddling to enjoy the best price</li>
+                </ul>
+                <p>If you want to discover wild Marseille, far from the tourists, then don't miss Les Goudes! Prepare for an immersion between land and sea, in one of the most beautiful landscapes of southern France. 🌊🔥</p>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section alt-section" data-genre="history" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre history">History</div>
+            </div>
+            <h2>8. Visit a Marseille Soap Factory</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Savons_de_Marseille_002.JPG" alt="Marseille Soap Factory">
+            <div class="hidden-content">
+                <p>Impossible to leave without a real Marseille soap! Visit a traditional soap factory to understand the manufacturing process and buy authentic soaps.</p>
+                <ul>
+                    <li>To make your own soap in one of the oldest soap factories in Marseille, go <a href="https://coclibel.com/serviceprod1/1738946656794x286228932908023800?lang=fr_FR&root=1738946596299x233740637868130300&serviceaccueillant=1727627635930x348655286520905700&discount=discount" target="_blank">here</a>.</li>
+                </ul>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section" data-genre="gastronomy" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre gastronomy">Gastronomy</div>
+            </div>
+            <h2>9. Savor Panisses in L'Estaque</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Panisses_marseillaises_4.jpg" alt="L'Estaque">
+            <div class="hidden-content">
+                <p>L'Estaque is a district known for its typically Marseille atmosphere and its panisses, delicious chickpea fritters.</p>
+                <ul>
+                    <li>Where to eat the best panisses? Chez Magali and Chez Freddy!</li>
+                </ul>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section alt-section" data-genre="nature" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre nature">Nature</div>
+            </div>
+            <h2>10. Enjoy the Calanque de Sugiton</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Calanque_de_Sugiton.JPG/800px-Calanque_de_Sugiton.JPG" alt="Calanque de Sugiton">
+            <div class="hidden-content">
+                <p>Sugiton is a true natural jewel that seems to have been tailor-made for humans. Its crystal-clear water, preserved biodiversity, and wild setting make it an almost unreal place, as if nature itself had decided to offer Marseille its own lagoon. Between the rocks sculpted by time and the hidden coves, it's the perfect place to relax with a hammock and a good book, lulled by the sound of cicadas and the lapping of waves. Perfect for a relaxing break with a hammock and a good book.</p>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section" data-genre="culture" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre culture">Culture</div>
+            </div>
+            <h2>11. Visit the Mucem</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Mucem_Marseille_01.jpg/1920px-Mucem_Marseille_01.jpg" alt="Le Panier">
+            <div class="hidden-content">
+                <p>A true symbol of the encounter between tradition and modernity, the Mucem is a must-see in Marseille. Designed by architect Rudy Ricciotti, its building impresses with its interlacing of perforated concrete, evoking Mediterranean mashrabiyas. This national museum explores European and Mediterranean civilizations through captivating exhibitions that blend history, art, and anthropology. Located by the sea, connected to the Fort Saint-Jean by a spectacular footbridge, it also offers stunning views of the Old Port and the Mediterranean.</p>
+                <ul>
+                    <li>Book your tickets <a href="https://billetterie.mucem.org/fr-FR/billetteriemucem" target="_blank">here</a></li>
+                </ul>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section alt-section" data-genre="culture gastronomy" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre culture">Culture</div>
+                <div class="genre gastronomy">Gastronomy</div>
+            </div>
+            <h2>12. Discover the Cours Julien</h2>
+            <img src="https://tarpin-bien.com/wp-content/uploads/2021/01/MAT-20141031-8887-e1611591018966-980x551.jpg" alt="Cours Julien">
+            <div class="hidden-content">
+                <p>The Cours Julien is the bohemian soul of Marseille, a vibrant neighborhood where art and creativity explode at every street corner. A true open-air gallery, its walls are covered in colorful street art, making every stroll a artistic discovery. Here, lively cafes, independent bookstores, and designer boutiques create a unique atmosphere, a mix of excitement and total chill. Whether you're strolling, soaking up the vibe, or just enjoying a good coffee on a terrace, it's impossible not to fall in love with the 'Cours Ju'!
+                    Pro tip: Go in the early evening to see the sunset from the top of the stairs, then grab some seafood to enjoy on one of the Plaine's terraces. Be sure to reserve them in advance <a href="https://coclibel.com/serviceprod1/1728469746291x932966249970794500?lang=fr_FR&root=1727873864658x234702049219444740&serviceaccueillant=1727627635930x348655286520905700&discount=ok" target="_blank">here</a>.</p>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section" data-genre="culture history" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre culture">Culture</div>
+                <div class="genre history">History</div>
+            </div>
+            <h2>13. Visit the Palais Longchamp</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Marseille_Palais_Longchamp_At_Night_JD_22052007.jpg/1920px-Marseille_Palais_Longchamp_At_Night_JD_22052007.jpg" alt="Palais Longchamp">
+            <div class="hidden-content">
+                <p>A true architectural masterpiece that is not content with just being beautiful: it also houses two museums with fascinating exhibitions, with free entry. Surrounded by magnificent gardens, it's an ideal place for a stroll and to enjoy an exceptional panorama. But that's not all! Here, history is etched in stone: you can find vestiges of the past, witnesses to the moment when water was brought to Marseille, a crucial turning point for its development. A perfect blend of culture, heritage, and relaxation.</p>
+                <ul>
+                    <li>Free Museums are <a href="https://coclibel.com/serviceprod1/1738927066023x969153448478507000?root=1738779355768x986147144822947800&lang=fr_FR" target="_blank">here</a></li>
+                </ul>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section alt-section" data-genre="nature" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre nature">Nature</div>
+            </div>
+            <h2>14. Excursions Around Marseille</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Cassis-Port.jpg/1920px-Cassis-Port.jpg" alt="La Rochelle">
+            <div class="hidden-content">
+                <p>Don't stop at Marseille! Discover the treasures of the region by visiting picturesque must-see locations. Just a few kilometers away, La Rochelle will enchant you with its spectacular calanques and charming port. La Ciotat, the birthplace of cinema, offers a beautiful coastline and an authentic Mediterranean atmosphere. Further afield, Hyères and its paradisiacal islands, such as Porquerolles, reveal beaches worthy of the Caribbean. These excursions are perfect for a day or a weekend away from the urban hustle and bustle. It is also essential in Marseille to visit the <a href="https://coclibel.com/serviceprod1/1738749162110x603605586749685800?lang=&root=1738749045154x851585167743778800&serviceaccueillant=1727627635930x348655286520905700&discount=discount">vineyards</a>, the cradle of the Mediterranean terroir.</p>
+                <ul>
+                    <li>Find all our deals <a href="https://coclibel.com/serviceproduct/1727627635930x348655286520905700" target="_blank">here</a></li>
+                </ul>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section" data-genre="nature culture" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre nature">Nature</div>
+                <div class="genre culture">Culture</div>
+            </div>
+            <h2>15. Visit the Frioul Islands</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Monte-Cristo_if_castle_-_marseille_France_by_JM_Rosier.JPG" alt="Îles du Frioul">
+            <div class="hidden-content">
+                <p>The Frioul Islands are an archipelago located a short distance from Marseille, offering an exceptional natural setting. Accessible by boat from the Old Port, these islands are perfect for a day of relaxation and discovery. You can explore fine sandy beaches, hidden coves, and hiking trails offering stunning views of the Mediterranean. Don't miss visiting the Château d'If, famous for being the setting of Alexandre Dumas' novel "The Count of Monte Cristo."</p>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section" data-genre="nature culture" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre nature">Nature</div>
+                <div class="genre culture">Culture</div>
+            </div>
+            <h2>16. The Underwater Museum of Marseille</h2>
+            <img src="https://www.leparisien.fr/resizer/67SHxBIezUgIsbgDePszXwVauJ8=/932x582/cloudfront-eu-central-1.images.arcpublishing.com/leparisien/AW72LJD42VZ4T3QRMZM4QESN6I.jpg" alt="Îles du Frioul">
+            <div class="hidden-content">
+                <p>If you're looking for a unique and unforgettable experience in Marseille, the Underwater Museum is THE place to visit! Located a few meters below the surface, off the beach of Les Catalans, this unique museum in France immerses you (literally) in an artistic and ecological universe like no other.</p>
+                <h3>🖼️ A Museum… Underwater!</h3>
+                <p>Unlike traditional museums, there are no exhibition halls or display cases here: the artworks are submerged 5 meters deep, accessible only by diving or snorkeling! A dozen monumental sculptures, created by contemporary artists, rest on the seabed, gradually inhabited by marine flora and fauna. A fascinating spectacle where art and nature merge.</p>
+                <h3>🤿 Two Ways to Discover It: Snorkeling or Diving!</h3>
+                <ul>
+                    <li>By snorkeling (fins, mask, snorkel): If you're comfortable in the water, you can observe the sculptures while floating on the surface, a real pleasure accessible to all!</li>
+                    <li>By scuba diving: For a total immersion, equip yourself with a tank and swim close to the sculptures, a magical sensation that takes your breath away.</li>
+                </ul>
+                <p>💡 Never dived before? No problem, you can experience this incredible adventure as part of a trial dive! An ideal opportunity to discover the underwater world while exploring a unique art gallery. 😍</p>
+                <h3>✨ HOT DEAL: Special Offer for You! 🎉</h3>
+                <p>👉 Enjoy a trial dive at the underwater museum at a reduced price! Find all the details and book your experience here: 🔗 <a href="https://coclibel.com/serviceprod1/1737733690820x452701390108622850?lang=fr_FR&root=1737733596263x884934549516845000&serviceaccueillant=1727627635930x348655286520905700&discount=discount" target="_blank">View the Offer</a></p>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+        <div class="section alt-section" data-genre="gastronomy" onclick="toggleText(this)">
+            <div class="genre-container">
+                <div class="genre gastronomy">Gastronomy</div>
+            </div>
+            <h2>16. Taste Bouillabaisse</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Bouillabaisse_01.jpg/1920px-Bouillabaisse_01.jpg" alt="Bouillabaisse chez Fonfon">
+            <div class="hidden-content">
+                <p>It's impossible to visit Marseille without trying its most emblematic culinary specialty: <strong>bouillabaisse</strong>! This traditional fishermen's dish, made with fresh fish, seafood, and a flavorful saffron-spiced soup, is a true institution.</p>
+                <h3>🍲 Where to Savor the Best Bouillabaisse in Marseille?</h3>
+                <p>📍 <strong>Chez Fonfon</strong>, a iconic restaurant located in the charming port of Vallon des Auffes, is a must-visit to enjoy an authentic bouillabaisse in a exceptional seaside setting.</p>
+                <h3>💡 Why Choose Chez Fonfon?</h3>
+                <ul>
+                    <li>✅ <strong>A traditional recipe</strong> prepared with the day's fresh fish.</li>
+                    <li>✅ <strong>An idyllic setting</strong> with a view of the Vallon des Auffes, one of the most beautiful spots in Marseille.</li>
+                    <li>✅ <strong>Quality service</strong> in a warm and authentic atmosphere.</li>
+                </ul>
+                <h3>🔥 HOT DEAL: Book Your Bouillabaisse at Chez Fonfon!</h3>
+                <p>Enjoy a gastronomic meal by the sea with an exceptional bouillabaisse.</p>
+                👉 Book here: 🔗 <a href="https://www.chez-fonfon.com/" target="_blank"> Reserve a Table at Chez Fonfon</a>
+                <h3>📍 Practical Info:</h3>
+                <ul>
+                    <li>📌 Address: 140 Rue du Vallon des Auffes, 13007 Marseille, France</li>
+                    <li>📅 Opening Hours: Every day except Tuesday</li>
+                    <li>📞 Reservation recommended: +33 4 91 52 14 38</li>
+                </ul>
+                <p>If you want to experience a unique culinary adventure and savor an authentic bouillabaisse in one of the most beautiful neighborhoods of Marseille, <strong>Chez Fonfon is the place for you!</strong> 🍽️🔥</p>
+            </div>
+            <button class="toggle-btn">Show More</button>
+        </div>
+    </div>
+</body>
+</html>
